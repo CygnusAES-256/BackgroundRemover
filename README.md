@@ -42,22 +42,4 @@ Choose one of the following configurations.
 * **NVIDIA GPU acceleration**
   python -m pip install "rembg[gpu]" Pillow
 
-GPU acceleration requires compatible hardware, drivers, and runtime components. Installing the Python packages alone does not guarantee that your GPU will be detected. CPU execution does not require a GPU.
-
-## Usage
-
-Run the Python script from your terminal:
-
-python main.py
-
-Replace main.py with your script's actual filename if necessary.
-
-Select an image in the file dialog and wait for the process to finish. The resulting PNG will be saved in the same directory as the script.
-
-## Output
-
-For an input image named photo.jpg, the output will be:
-
-photo_no_background.png
-
-The original image remains unchanged.
+GPU acceleration requires compatible hardware, drivers, and runtime components.
