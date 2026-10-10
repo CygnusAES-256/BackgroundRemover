@@ -1,45 +1,65 @@
 BackgroundRemover
 
-A simple Python application that removes the background from images using rembg.
+A simple Python application that removes image backgrounds using rembg.
 
-Select an image through a graphical file dialog, process it automatically, and save the result as a transparent PNG image.
+Select an image through a graphical file dialog, remove its background, and save the result as a transparent PNG.
 
 Features
-Graphical image selection using Tkinter.
-Supports PNG, JPG, JPEG, WEBP, and BMP images.
-Automatic background removal with rembg.
-Saves the processed image as a PNG with a transparent background.
-Keeps the original image unchanged.
+Select images through a graphical file dialog.
+Supports PNG, JPG, JPEG, WEBP, and BMP.
+Automatically removes backgrounds using rembg.
+Saves the result as a transparent PNG.
+Preserves the original image.
 Requirements
-Python libraries that are not included in the standard library.
-A compatible runtime environment for CPU or optional GPU acceleration.
-Python libraries
+Python installed on your system.
+Pillow for image processing.
+rembg for background removal.
+Tkinter for the graphical interface. Usually included with Python, but may require separate installation on Linux.
 
-The application uses the following libraries:
-
-Pillow — image loading and saving.
-rembg — background removal.
-Tkinter — graphical file selection, usually included with Python. Some Linux distributions require a separate system package.
-
-The os module is part of Python's standard library and does not need to be installed separately.
+The os module is part of Python's standard library and does not require separate installation.
 
 Installation
-Clone this repository:
-   git clone https://github.com/USERNAME/BackgroundRemover.git
-   cd BackgroundRemover
+1. Download the code
 
-Install the dependencies.
+Choose whichever method you prefer:
 
-For CPU execution:
+Clone the repository:
+  git clone https://github.com/USERNAME/BackgroundRemover.git
+  cd BackgroundRemover
 
-   python -m pip install "rembg[cpu]"
-   python -m pip install Pillow
+Download the source code only: Click Code → Download ZIP on the GitHub repository page and extract the downloaded archive. You do not need Git installed for this method.
+2. Install the dependencies
+
+Choose one of the following configurations.
+
+CPU execution
+
+python -m pip install "rembg[cpu]" Pillow
 
 
-For NVIDIA GPU acceleration:
+NVIDIA GPU acceleration
 
-   python -m pip install "rembg[gpu]"
-   python -m pip install Pillow
+python -m pip install "rembg[gpu]" Pillow
 
 
-Important: CPU and GPU installations use different ONNX Runtime backends.
+GPU acceleration requires compatible hardware, drivers, and runtime components. Installing the Python packages alone does not guarantee that your GPU will be detected. CPU execution does not require a GPU.
+
+Usage
+
+Run the Python script from your terminal:
+
+python main.py
+
+
+Replace main.py with your script's actual filename if necessary.
+
+Select an image in the file dialog and wait for the process to finish. The resulting PNG will be saved in the same directory as the script.
+
+Output
+
+For an input image named photo.jpg, the output will be:
+
+photo_no_background.png
+
+
+The original image remains unchanged.
