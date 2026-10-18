@@ -24,6 +24,10 @@ Select an image through a graphical file dialog, remove its background, and save
 
 ## Installation
 
+### 0. Download the executable
+
+The executable is available in the Releases section. No Python installation or additional dependencies are required.
+
 ### 1. Download the code
 
 Choose whichever method you prefer:
