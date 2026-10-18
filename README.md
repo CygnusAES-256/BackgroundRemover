@@ -14,6 +14,8 @@ Select an image through a graphical file dialog, remove its background, and save
 
 ## Requirements
 
+* You can download the executable from the releases section
+
 * Python installed on your system.
 * Pillow for image processing.
 * rembg for background removal.
